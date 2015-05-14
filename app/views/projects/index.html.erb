@@ -1,1 +1,5 @@
-index.html.erb
+<% @projects.each do p %>
+<h1><%= p.name %></h1>
+<p><%= p.description %></p>
+<h6><%= p.funding_goal %></h6>
+<% end %>
