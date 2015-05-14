@@ -1,16 +1,16 @@
-class ProductsController < ApplicationController
+class ProjectsController < ApplicationController
   def index
  		@projects = Project.all
   end
 
   def new
-  	@product = Project.new
+  	@project = Project.new
   end
 
   def create
-  	@product = Project.new(project_params)
+  	@project = Project.new(project_params)
 
-  	if @product.save
+  	if @project.save
   		redirect_to project_url
   	else
   		render :new
