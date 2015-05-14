@@ -1,0 +1,29 @@
+<%= form_for(@project) do |f| %>
+
+	<div class="field">
+		<%= f.label :name %><br />
+		<%= f.text_field :name %>
+	</div>
+	<div class="feild">
+		<%= f.label :description %><br />
+		<%= f.text_area :description %>
+	</div>
+	<div class="feild">
+		<%= f.label :start_date %><br />
+		<%= f.date :start_date %>
+	</div>
+	<div class="feild">
+		<%= f.label :end_date %><br />
+		<%= f.date :end_date %>
+	</div>
+	<div class="feild">
+		<%= f.label :photo %><br />
+		<%= f.string :photo %>
+	</div>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+
+<% end %>
+
+
