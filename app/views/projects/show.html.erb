@@ -2,4 +2,13 @@
 <p><%= @project.description %></p>
 <p>Started at: <%= @project.start_date %>, ends at <%= @project.end_date %></p>
 <p>Funding goal: <%= @project.funding_goal %></p>
+<p><strong> Rewards: <% @project.rewards.each do |reward| %></strong>
+    <p><%= reward.title %></p>
+    <p><%= reward.description %></p>
+    <p><%= reward.amount %></p>
+    <p><%= reward.cap %></p>
+<%end %>
+</p>
+
 <%= link_to "Edit Project", edit_project_path %>
+<%= link_to "Back to all Projects", projects_path %>
