@@ -35,6 +35,8 @@ gem 'sorcery'
 # gem 'capistrano-rails', group: :development
 gem 'favorite_things'
 
+gem 'better_errors'
+
 #faker gem
 gem 'faker'
 
