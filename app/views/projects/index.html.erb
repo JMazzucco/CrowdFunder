@@ -1,6 +1,8 @@
 <% @projects.each do |p| %>
 <h1><%= link_to p.name, "/projects/#{p.id}" %></h1>
-<h6>Description: </h6><p><%= p.description %></p>
+<img class="project-thumb" src="<%= p.photo %>" />
+<h6>Description: </h6>
+<p><%= p.description %></p>
 <h6>Funding Goal: <%= p.funding_goal %></h6>
 
 <% end %>

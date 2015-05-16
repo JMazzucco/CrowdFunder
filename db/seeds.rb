@@ -13,6 +13,6 @@
     funding_goal: Faker::Number.number(5),
     start_date: Faker::Date.between(2.days.ago, Date.today),
     end_date: Faker::Date.forward(23),
-    photo: Faker::Avatar.image
+    photo: Faker::Company.logo
     )
 end
