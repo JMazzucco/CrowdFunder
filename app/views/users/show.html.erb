@@ -1,7 +1,14 @@
-
-<%= @user.image %>
+<img src="<%= @user.image %>" />
 <h1><%= @user.name %></h1>
 <p><%= @user.email %></p>
+
+<p>
+    <strong>All Backed Projects: <% @user.backed_projects.each do |project| %></strong>
+        <p><%= project.name %></p>
+        <p><%= project.description %></p>
+        <img src="<%= project.photo %>" />
+    <%end %>
+</p>
 
 <%= link_to "Back to all Projects", projects_path %>
 
