@@ -9,7 +9,7 @@ class PledgesController < ApplicationController
     @reward = @project.rewards.find(params[:reward_id])
     @pledge = @project.pledges.new(reward_id: @reward.id, user_id: current_user.id, project_id: @project)
       if @pledge.save
-        updated_amount = (@reward.amount + @reward.amount)
+        updated_amount = (@project.total_pledges + @reward.amount)
         @project.update_attribute(:total_pledges, updated_amount)
         redirect_to projects_url
       else
