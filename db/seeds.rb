@@ -16,3 +16,14 @@
     photo: Faker::Company.logo
     )
 end
+
+1.times do
+  User.create!(
+    name: Faker::Name.name,
+    email: Faker::Internet.email,
+    image: Faker::Avatar.image,
+    password: "pass",
+    password_confirmation: "pass"
+    )
+  end
+

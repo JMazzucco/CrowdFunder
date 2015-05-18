@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :pledges, only: [:new, :create]
   end
 
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :show]
   resources :user_sessions, only: [:new, :create, :destroy]
 
   get 'login' => 'user_sessions#new', :as => :login
