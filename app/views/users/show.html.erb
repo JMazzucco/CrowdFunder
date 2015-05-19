@@ -7,8 +7,15 @@
         <p><%= project.name %></p>
         <p><%= project.description %></p>
         <img src="<%= project.photo %>" />
-    <%end %>
+    <% end %>
 </p>
 
+<p>
+  <strong>All Owned Projects:</strong> <% @user.owned_projects.each do |project| %>
+      <p><%= project.name %></p>
+      <p><%= project.description %></p>
+      <img src="<%= project.photo %>" />
+    <% end %>
+</p>
 <%= link_to "Back to all Projects", projects_path %>
 
